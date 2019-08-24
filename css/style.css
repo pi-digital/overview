@@ -1,7 +1,7 @@
 @import url('normalize.css');
 
 body{
-	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: Roboto;
 	background: #e9f0f5 url(../images/pattern.png) repeat top left;
 	font-weight: 400;
 	font-size: 12px;
