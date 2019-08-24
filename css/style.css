@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto Condensed:200,300,400,500,600);
 
 body{
-	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: 'Roboto Condensed', Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
 	background: #e9f0f5 url(../images/pattern.png) repeat top left;
 	font-weight: 400;
 	font-size: 12px;
@@ -159,18 +159,18 @@ a:hover{
 	position: relative;
 	padding: 10px 0px;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+	font-family: Baskerville;
 }
 .hs-inner p:first-letter{
 	font-size: 28px;
 }
 #introduction .hs-inner p:first-of-type{
-	font-size: 24px;
-	text-align: left;
-	line-height: 36px;
-	font-style: italic;
-	color: #75838D;
+	font-size: 18px;
+	text-align: justify;
+	line-height: 24px;
+	color: #333;
 	letter-spacing: 0px;
-	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: Baskerville;
 }
 a.hs-totop-link{
 	display: none;
