@@ -30,11 +30,11 @@ h2{
 	font-size: 40px;
 	padding-bottom: 15px;
 	border-bottom: 5px solid rgba(190, 211, 226, 0.2);
-	color: #a9becd;
+	color: #308fd9;
 	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
 	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
-	font-weight: 700;
-	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-weight: 400;
+	font-family: 'Roboto Condensed';
 }
 h3{
 	font-style: italic;
