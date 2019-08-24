@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto Condensed:200,300,400,500,600);
 
 body{
-	font-family: 'Roboto Condensed';
+	font-family: 'Roboto Condensed', Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
 	background: #e9f0f5 url(../images/pattern.png) repeat top left;
 	font-weight: 400;
 	font-size: 12px;
@@ -23,6 +23,7 @@ h1{
 	font-size: 46px;
 	color: #00aacc;
 	line-height: 0.85;
+	font-family: 'Roboto Condensed';
 }
 h2{
 	font-size: 40px;
@@ -67,6 +68,7 @@ a:hover{
 	letter-spacing: 2px;
 	font-weight: 700;
 	padding: 15px 10px;
+	font-family: 'Roboto Condensed';
 }
 .hs-menu{
 	position: fixed;
