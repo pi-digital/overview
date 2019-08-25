@@ -1,5 +1,13 @@
 @import url('normalize.css');
 @import url(http://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600);
+@font-face {
+  font-family: ‘Oswald’;
+  src: url(‘fonts/Oswald-Regular-webfont.eot’); /* IE9 Compat Modes */
+  src: url(‘fonts/Oswald-Regular-webfont.eot?#iefix’) format(’embedded-opentype’), /* IE6-IE8 */
+       url(‘fonts/Oswald-Regular-webfont.woff’) format(‘woff’), /* Pretty Modern Browsers */
+       url(‘fonts/Oswald-Regular-webfont.ttf’)  format(‘truetype’); /* Safari, Android, iOS */
+  font-weight: normal;
+}
 
 body{
 	font-family: "Oswald", Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
