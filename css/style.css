@@ -125,7 +125,7 @@ a:hover{
 .hs-menu nav a span:nth-child(2){
 	display: block;
 	color: #fff;
-	font-style: italic;
+	font-style: normal;
 	font-weight: 400;
 	text-transform: none;
 	padding-top: 3px;
