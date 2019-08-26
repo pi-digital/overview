@@ -113,7 +113,7 @@ a:hover{
 }
 .hs-menu nav:hover,
 .hs-menu nav:focus {
-  overflow-y: scroll: visible;
+  overflow-y: scroll;
   transition: visibility 0s 0.2s;
 }
 .hs-menu nav a:active{
