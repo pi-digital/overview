@@ -100,7 +100,7 @@ a:hover{
 	left: 0px;
 	right: 0px;
 	bottom: 50px;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	height: 350px;
 	float: left;
 }
@@ -109,7 +109,12 @@ a:hover{
 	padding: 10px 20px;
 	text-align: center;
 	outline: none;
-	border-bottom: 1px dashed rgba(126, 126, 126, 0.2);
+	border-bottom: 1px dashed rgba(126, 126, 126, 0.2);	
+}
+.hs-menu nav:hover,
+.hs-menu nav:focus {
+  overflow-y: scroll: visible;
+  transition: visibility 0s 0.2s;
 }
 .hs-menu nav a:active{
 	box-shadow: 7px 0px 17px #000 inset;
