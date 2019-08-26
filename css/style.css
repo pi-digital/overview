@@ -100,6 +100,9 @@ a:hover{
 	left: 0px;
 	right: 0px;
 	bottom: 50px;
+	overflow-y: scroll;
+	height: 100%;
+	float: left;
 }
 .hs-menu nav a{
 	display: block;
