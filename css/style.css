@@ -241,7 +241,6 @@ a.hs-totop-link{
 		opacity: 1;
 	}
 	.hs-content-scroller{
-		overflow-x: scroll;
 	}
 	.hs-content:hover{
 		background: transparent;
@@ -252,7 +251,6 @@ a.hs-totop-link{
 }
 @media screen and (max-width: 715px) {
 	body{
-		overflow-x: auto;
 		overflow-y: auto;
 	}
 	.codrops-top a{
