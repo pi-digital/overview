@@ -101,8 +101,6 @@ a:hover{
 	right: 0px;
 	bottom: 50px;
 	overflow-y: hidden;
-	height: 900px;
-	float: left;
 }
 .hs-menu nav a{
 	display: block;
@@ -153,7 +151,6 @@ a:hover{
 	border-right: 1px dashed rgba(126, 126, 126, 0.2);
 	border-left: 1px dashed rgba(255, 255, 255, 0.5);
 	background: transparent;
-	cursor: pointer;
 	-webkit-transition: background 0.3s linear;
 	-moz-transition: background 0.3s linear;
 	-o-transition: background 0.3s linear;
@@ -185,7 +182,7 @@ a:hover{
 .hs-inner p:first-letter{
 	font-size: 28px;
 }
-#introduction .hs-inner p:first-of-type{
+#linhas-gerais .hs-inner p:first-of-type{
 	font-size: 18px;
 	text-align: justify;
 	line-height: 24px;
@@ -195,7 +192,7 @@ a:hover{
 }
 a.hs-totop-link{
 	display: none;
-	content: 'Scroll to top';
+	content: 'Voltar ao Topo';
 	position: fixed;
 	z-index: 10000;
 	bottom: 0px;
