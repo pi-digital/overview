@@ -1,7 +1,20 @@
 @import url('normalize.css');
+@import url(http://fonts.googleapis.com/css?family=Roboto Condensed:200,300,400,500,600);
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-condensed-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+       url('../fonts/roboto-condensed-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
 
 body{
-	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: "Roboto Condensed", Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
 	background: #e9f0f5 url(../images/pattern.png) repeat top left;
 	font-weight: 400;
 	font-size: 12px;
@@ -11,35 +24,42 @@ body{
 }
 h1, h3, h4{
 	font-weight: 400;
+	font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 h1{
-	font-style: italic;
+	font-style: normal;
 	border-bottom: 1px solid rgba(126, 126, 126, 0.3);
-	padding: 35px 15px 15px 15px;
-	margin: 0px 20px 20px 20px;
+	padding: 35px 15px;
+	margin: 0px 20px 0px 20px;
 	position: relative;
-	font-size: 38px;
+	font-weight: 400;
+	font-size: 46px;
+	color: #308fd9;
+	line-height: 0.85;
+	font-family: "Roboto Condensed";
 }
 h2{
 	font-size: 40px;
 	padding-bottom: 15px;
-	border-bottom: 5px solid rgba(190, 211, 226, 0.2);
-	color: #a9becd;
+	border-bottom: 1px solid rgba(190, 211, 226, 0.2);
+	color: #308fd9;
 	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4);
 	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
-	font-weight: 700;
+	font-weight: 400;
+	font-family: "Roboto Condensed";
 }
 h3{
 	font-style: italic;
 	font-size: 26px;
 	color: #585959;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.4);
+	padding-top: 10px;
 }
 h4{
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	line-height: 20px;
-	padding: 10px 0px;
+	padding-bottom: 10px;
 	color: #626a6f;
 	border-bottom: 1px solid rgba(126, 126, 126, 0.1);
 	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
@@ -60,8 +80,9 @@ a:hover{
 	text-transform: uppercase;
 	display: block;
 	letter-spacing: 2px;
-	font-weight: 700;
-	padding: 20px 10px;
+	font-weight: 300;
+	padding: 15px 10px;
+	font-family: 'Roboto Condensed';
 }
 .hs-menu{
 	position: fixed;
@@ -79,13 +100,19 @@ a:hover{
 	left: 0px;
 	right: 0px;
 	bottom: 50px;
+	overflow-y: hidden;
 }
 .hs-menu nav a{
 	display: block;
 	padding: 10px 20px;
 	text-align: center;
 	outline: none;
-	border-bottom: 1px dashed rgba(126, 126, 126, 0.2);
+	border-bottom: 1px dashed rgba(126, 126, 126, 0.2);	
+}
+.hs-menu nav:hover,
+.hs-menu nav:focus {
+  overflow-y: scroll;
+  transition: visibility 0s 0.2s;
 }
 .hs-menu nav a:active{
 	box-shadow: 7px 0px 17px #000 inset;
@@ -96,7 +123,7 @@ a:hover{
 .hs-menu nav a span:nth-child(2){
 	display: block;
 	color: #fff;
-	font-style: italic;
+	font-style: normal;
 	font-weight: 400;
 	text-transform: none;
 	padding-top: 3px;
@@ -124,6 +151,7 @@ a:hover{
 	border-right: 1px dashed rgba(126, 126, 126, 0.2);
 	border-left: 1px dashed rgba(255, 255, 255, 0.5);
 	background: transparent;
+	cursor: pointer;
 	-webkit-transition: background 0.3s linear;
 	-moz-transition: background 0.3s linear;
 	-o-transition: background 0.3s linear;
@@ -150,21 +178,22 @@ a:hover{
 	position: relative;
 	padding: 10px 0px;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+	font-family: Baskerville;
 }
 .hs-inner p:first-letter{
 	font-size: 28px;
 }
 #linhas-gerais .hs-inner p:first-of-type{
-	font-size: 24px;
-	text-align: left;
-	line-height: 36px;
-	font-style: italic;
-	color: #75838D;
+	font-size: 18px;
+	text-align: justify;
+	line-height: 24px;
+	color: #333;
 	letter-spacing: 0px;
+	font-family: Baskerville;
 }
 a.hs-totop-link{
 	display: none;
-	content: 'Scroll to top';
+	content: 'Voltar ao Topo';
 	position: fixed;
 	z-index: 10000;
 	bottom: 0px;
