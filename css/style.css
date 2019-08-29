@@ -50,8 +50,8 @@ h2{
 	font-family: "Roboto Condensed";
 }
 h3{
-	font-style: italic;
-	font-size: 26px;
+	font-style: normal;
+	font-size: 20px;
 	color: #585959;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.4);
 	padding-top: 10px;
