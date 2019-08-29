@@ -40,6 +40,7 @@ h1{
 }
 h2{
 	font-size: 40px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(190, 211, 226, 0.2);
 	color: #308fd9;
@@ -54,11 +55,13 @@ h3{
 	color: #585959;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.4);
 	padding-top: 10px;
+	padding-bottom: 10px;
 }
 h4{
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	line-height: 20px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 	color: #626a6f;
 	border-bottom: 1px solid rgba(126, 126, 126, 0.1);
