@@ -176,15 +176,12 @@ a:hover{
 }
 .hs-inner p{
 	font-size: 18px;
-	line-height: 24px;
+	line-height: normal;
 	text-align: justify;
 	position: relative;
 	padding: 10px 0px;
 	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
 	font-family: "Roboto Condensed";
-}
-.hs-inner p:first-letter{
-	font-size: 28px;
 }
 #linhas-gerais .hs-inner p:first-of-type{
 	font-size: 18px;
