@@ -26,7 +26,7 @@
 		text-transform: none;
 		font-weight: 300;
 		font-family: 'Roboto Condensed';
-		line-height: 60px;
+		line-height: 22px;
 }
 
 .gn-menu-main {
@@ -44,6 +44,7 @@
 		color: #5f6f81;
 		text-decoration: none;
 		cursor: pointer;
+		padding-left: 20px;
 }
 
 .no-touch .gn-menu-main a:hover,
@@ -120,7 +121,7 @@
 .gn-menu {
 		border-bottom: 1px solid #c6d0da;
 		text-align: left;
-		font-size: 18px;
+		font-size: 15px;
 }
 
 .gn-menu li:not(:first-child),
