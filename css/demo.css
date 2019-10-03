@@ -67,8 +67,6 @@ h4{
 a{
 	color: #308fd9;
 	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }
 a:hover{
 	color: #87b6da;
