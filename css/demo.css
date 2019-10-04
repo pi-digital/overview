@@ -59,32 +59,68 @@ h1 span{
 	background-color:#1693eb;
 	color:#fff;
 }
-/* Header Style */
-.header{
-	line-height:24px;
-	font-size:11px;
-	background:#000;
-	opacity:0.9;
-	text-transform:uppercase;
-	z-index:4;
-	-moz-box-shadow:1px 0px 2px #000;
-	-webkit-box-shadow:1px 0px 2px #000;
-	box-shadow:1px 0px 2px #000;
+
+/* Header */
+.codrops-header {
+	padding: 3em 3em 0 3em;
+	letter-spacing: -1px;
 }
-.header a{
-	padding:0px 10px;
-	letter-spacing:1px;
-	color:#ddd;
-	display:block;
-	float:left;
+
+.codrops-header h1 {
+	font-family: 'Roboto Condensed';
+	font-weight: 600;
+	font-size: 6em;
+	line-height: 1.15;
+	margin-bottom: 0;
+	margin-top: 0.25em;
+	padding: 0px 50px 0px 50px;
+	text-align: center;
+	color: #308fd9;
 }
-.header a:hover{
-	color:#fff;
+
+.codrops-header h1 span {
+	display: block;
+	font-size: 50%;
+	font-weight: 400;
+	padding-top: 0.325em;
+	color: #bdc2c9;
 }
-.header span.right{
-	float:right;
+
+.codrops-header h2 {
+	font-family: 'Roboto Condensed';
+	font-weight: 200;
+	font-size: 4em;
+	line-height: 1.15;
+	margin-bottom: 0;
+	padding: 0px 50px 0x 50px;
+	text-align: center;
+	color: rgb(51, 51, 51);
 }
-.header span.right a{
-	float:none;
-	display:inline;
+
+.codrops-header h3 {
+        font-family: 'Roboto Condensed';
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 2px;
+	font-weight: 300;
+	font-size: 1em;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 0px 50px 50px 50px;
+	text-align: center;
+	color: rgb(51, 51, 51);
+}
+
+.codrops-header h5 {
+        font-family: 'Roboto Condensed';
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 2px;
+	font-weight: 300;
+	font-size: 1em;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 0px 50px 50px 50px;
+	text-align: center;
+	color: rgb(51, 51, 51);
 }
