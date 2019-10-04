@@ -4,7 +4,7 @@
 body{
 	background:#f7f7f7 url(../images/pattern.png) repeat top left;
 	color:#000;
-	font-family: 'Arial Narrow', Arial, sans-serif;
+	font-family: 'Roboto Condensed';
 	font-size:13px;
 	min-height:2000px;
 }
@@ -19,7 +19,7 @@ h1{
 	padding:20px;
 	font-size:28px;
 	color:#333;
-	font-family: 'Josefin Slab',Georgia, serif;
+	font-family: 'Roboto Condensed';
 	font-weight:400;
     text-align:center;
     text-shadow:1px 1px 1px #fff;
@@ -29,7 +29,7 @@ h1 span{
 	color:#1693eb;
 }
 .more{
-	font-family: 'Josefin Slab',Georgia, serif;
+	font-family: 'Roboto Condensed';
 	margin:0 auto;
 	text-align:center;
 	color:#ddd;
