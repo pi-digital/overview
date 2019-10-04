@@ -2,7 +2,7 @@
 
 /* General Demo Style */
 body{
-	background:#f7f7f7 url(../images/pattern.png) repeat top left;
+	background:#f7f7f7;
 	color:#000;
 	font-family: 'Roboto Condensed';
 	font-size:13px;
