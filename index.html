@@ -16,8 +16,17 @@
        		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
 		<script src="js/modernizr.custom.js"></script>
+		<script src="js/typescript.js"></script>
+		<script src="https://www.amcharts.com/lib/4/core.js"></script>
+		<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+		<script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+		<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 		<noscript>
 			<style>
+				#chartdiv {
+  				width: 100%;
+				height:550px;
+				}
 				.st-accordion ul li{
 					height:auto;
 				}
@@ -33,6 +42,7 @@
 			<h2>Overview</h2>
 		</header>
 		<div class="wrapper">
+		<div id="chartdiv"></div>
                 <div id="st-accordion" class="st-accordion">
                     <ul>
                         <li>
