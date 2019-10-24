@@ -59,41 +59,29 @@ var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirected
 
 chart.data = [
   {
-    name: "Core",
+    name: "Plano PI Digital",
     children: [
       {
-        name: "First",
-        children: [
-          { name: "A1", value: 100 },
-          { name: "A2", value: 60 }
-        ]
-      },
-      {
-        name: "Second",
-        children: [
-          { name: "B1", value: 135 },
-          { name: "B2", value: 98 }
-        ]
-      },
-      {
-        name: "Third",
+        name: "#01",
         children: [
           {
-            name: "C1",
+            name: "#03",
             children: [
-              { name: "EE1", value: 130 },
-              { name: "EE2", value: 87 },
-              { name: "EE3", value: 55 }
+              { name: "#04"},
             ]
-          },
-          { name: "C2", value: 148 },
-          {
-            name: "C3", children: [
-              { name: "CC1", value: 53 },
-              { name: "CC2", value: 30 }
-            ]
-          },
-          { name: "C4", value: 26 }
+      },
+      {
+        name: "#02",
+        children: [
+          { name: "#10"},
+          { name: "#13"}
+        ]
+      },
+      {
+        name: "#09",
+                children: [
+          { name: "#10", value: 500 },
+          { name: "#13", value: 500 }
         ]
       },
       {
@@ -121,7 +109,6 @@ chart.data = [
           }
         ]
       }
-
     ]
   }
 ];
