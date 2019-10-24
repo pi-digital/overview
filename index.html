@@ -38,6 +38,16 @@
   width: 100%;
 height:700px;
 }
+	
+table {
+  font-family: 'Roboto Condensed';
+}
+tx {
+  padding: 8px;
+}
+td {
+  padding: 8px;
+}
 </style>
 
 <!-- Resources -->
@@ -66,7 +76,7 @@ chart.data = [
         children: [
           { name: "#03", value: 100,
 	    children: [
-              { name: "#04", value 800 },
+              { name: "#04", value: 800 },
             ]
           },
           { name: "A2" }
@@ -146,7 +156,22 @@ networkSeries.fontSize = 10;
 </script>
 
 <!-- HTML -->
-<div id="chartdiv"></div>
+<table>
+  <tr>
+    <td><tx>#01: Nova Carta de Serviços ao Usuário e Atualização do Portal de Serviços do Governo Federal<br>
+#02: Integração ao Login Único (Acesso Br) da Plataforma de Cidadania Digital<br>
+#03: Diagnóstico de Transformação Digital dos Serviços Prestados pelo INPI<br>
+#04: Implementação de Meios Digitais de Pagamento de Retribuições (Gov Pay)<br>
+#05: Aplicativo para Facilitação do Acesso a Informações e Comunicados Institucionais<br>
+#06: Módulo E-Chip para Peticionamento Eletrônico nos Serviços de Topografias de Circuitos Integrados<br>
+#07: Soluções Tecnológicas de Automação do Fluxo de Processos de Patentes<br>
+#08: Simplificação do Acesso e Atendimento dos Serviços de Marcas e Patentes, e Facilitação da Consulta Processual (BuscaWeb)<br>
+#09: Redesenho do Portal do INPI<br>
+#10: Módulo de Avaliação Pós-Consumo do Serviço (WEB, SMS e Outros Canais)<br>
+#11: Solução de Agendamento Eletrônico de Atendimento Presencial
+</tx></td>
+    <td><div id="chartdiv"></div></td>
+  </tr>
 		<div class="wrapper">
                 <div id="st-accordion" class="st-accordion">
                     <ul>
