@@ -36,7 +36,7 @@
 <style>
 #chartdiv {
   width: 1287px;
-  height: 900px;
+  height: 800px;
 }
 	
 table {
@@ -64,7 +64,6 @@ th, tr, td {
 <!-- Resources -->
 <script src="https://www.amcharts.com/lib/4/core.js"></script>
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-<script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 <!-- Chart code -->
@@ -75,93 +74,229 @@ am4core.ready(function() {
 am4core.useTheme(am4themes_animated);
 // Themes end
 
-var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
-var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+
+// colors of main characters
+chart.colors.saturation = 0.45;
+chart.colors.step = 3;
+var colors = {
+    301:chart.colors.next(),
+    Monica:chart.colors.next(),
+    Phoebe:chart.colors.next(),
+    Ross:chart.colors.next(),
+    Joey:chart.colors.next(),
+    Chandler:chart.colors.next()
+}
+
+// data was provided by: https://www.reddit.com/user/notrudedude
 
 chart.data = [
-  {
-    name: "Plano PI Digital",
-    children: [
-      {
-        name: "#01",
-        children: [
-          { name: "#03",
-	    children: [
-              { name: "#04" },
-            ]
-          },
-          { name: "A2" }
-        ]
-      },
-      {
-        name: "#03",
-        children: [
-          { name: "B1", value: 135 },
-          { name: "B2", value: 98 }
-        ]
-      },
-      {
-        name: "Third",
-        children: [
-          {
-            name: "C1",
-            children: [
-              { name: "EE1", value: 130 },
-              { name: "EE2", value: 87 },
-              { name: "EE3", value: 55 }
-            ]
-          },
-          { name: "C2", value: 148 },
-          {
-            name: "C3", children: [
-              { name: "CC1", value: 53 },
-              { name: "CC2", value: 30 }
-            ]
-          },
-          { name: "C4", value: 26 }
-        ]
-      },
-      {
-        name: "Fourth",
-        children: [
-          { name: "D1", value: 415 },
-          { name: "D2", value: 148 },
-          { name: "D3", value: 89 }
-        ]
-      },
-      {
-        name: "Fifth",
-        children: [
-          {
-            name: "E1",
-            children: [
-              { name: "EE1", value: 33 },
-              { name: "EE2", value: 40 },
-              { name: "EE3", value: 89 }
-            ]
-          },
-          {
-            name: "E2",
-            value: 148
-          }
-        ]
-      }
+// node property fields take data from data items where they are first mentioned, that's 
+// why we add empty data items at the beginning and set colors here
+{"from":"#02", "color":colors.Monica},
+{"from":"#05", "color":colors.Rachel},
+{"from":"#08", "color":colors.Chandler},
+{"from":"#09", "color":colors.Ross},
+{"from":"#19", "color":colors.Joey},
+{"from":"#21", "color":colors.Phoebe},
 
-    ]
-  }
-];
+// real data
+{"from":"#01","to":"#03","value":50},
+{"from":"#01","to":"#12","value":100},
+{"from":"#02","to":"#04","value":25},
+{"from":"#02","to":"#05","value":25},
+{"from":"#02","to":"#08","value":100},
+{"from":"#02","to":"#10","value":75},
+{"from":"#02","to":"#20","value":25},
+{"from":"#02","to":"#21","value":75},
+{"from":"#02","to":"#24","value":75},
+{"from":"#03","to":"#04","value":50},
+{"from":"#03","to":"#06","value":50},
+{"from":"#03","to":"#07","value":50},
+{"from":"#05","to":"#08","value":75},
+{"from":"#08","to":"#13","value":50},
+{"from":"#08","to":"#14","value":25},
+{"from":"#08","to":"#15","value":75},
+{"from":"#08","to":"#20","value":25},
+{"from":"#08","to":"#21","value":75},
+{"from":"#08","to":"#22","value":25},
+{"from":"#08","to":"#23","value":75},
+{"from":"#08","to":"#24","value":100},
+{"from":"#09","to":"#02","value":75},
+{"from":"#09","to":"#04","value":75},
+{"from":"#09","to":"#05","value":50},
+{"from":"#09","to":"#10","value":75},
+{"from":"#09","to":"#11","value":75},
+{"from":"#09","to":"#15","value":75},
+{"from":"#09","to":"#16","value":100},
+{"from":"#09","to":"#17","value":100},
+{"from":"#09","to":"#18","value":100},
+{"from":"#09","to":"#20","value":25},
+{"from":"#09","to":"#21","value":75},
+{"from":"#09","to":"#22","value":25},
+{"from":"#09","to":"#23","value":75},
+{"from":"#09","to":"#24","value":100},
+{"from":"#14","to":"#15","value":75},
+{"from":"#14","to":"#20","value":25},
+{"from":"#14","to":"#21","value":75},
+{"from":"#14","to":"#22","value":25},
+{"from":"#14","to":"#23","value":75},
+{"from":"#19","to":"#01","value":25},
+{"from":"#19","to":"#02","value":75},
+{"from":"#19","to":"#03","value":25},
+{"from":"#19","to":"#04","value":25},
+{"from":"#19","to":"#05","value":75},
+{"from":"#19","to":"#06","value":25},
+{"from":"#19","to":"#07","value":25},
+{"from":"#19","to":"#08","value":75},
+{"from":"#19","to":"#09","value":75},
+{"from":"#19","to":"#10","value":25},
+{"from":"#19","to":"#11","value":25},
+{"from":"#19","to":"#12","value":25},
+{"from":"#19","to":"#13","value":25},
+{"from":"#19","to":"#14","value":25},
+{"from":"#19","to":"#15","value":25},
+{"from":"#19","to":"#16","value":25},
+{"from":"#19","to":"#17","value":25},
+{"from":"#19","to":"#18","value":25},
+{"from":"#19","to":"#20","value":25},
+{"from":"#19","to":"#21","value":75},
+{"from":"#19","to":"#22","value":25},
+{"from":"#19","to":"#23","value":25},
+{"from":"#19","to":"#24","value":25},
+{"from":"#20","to":"#21","value":100},
+{"from":"#22","to":"#23","value":100}]
 
-networkSeries.dataFields.value = "value";
-networkSeries.dataFields.name = "name";
-networkSeries.dataFields.children = "children";
-networkSeries.nodes.template.tooltipText = "{name}:{value}";
-networkSeries.nodes.template.fillOpacity = 1;
-networkSeries.manyBodyStrength = -20;
-networkSeries.links.template.strength = 0.8;
-networkSeries.minRadius = am4core.percent(2);
 
-networkSeries.nodes.template.label.text = "{name}"
-networkSeries.fontSize = 10;
+
+chart.dataFields.fromName = "from";
+chart.dataFields.toName = "to";
+chart.dataFields.value = "value";
+
+
+chart.nodePadding = 0.5;
+chart.minNodeSize = 0.01;
+chart.startAngle = 80;
+chart.endAngle = chart.startAngle + 360;
+chart.sortBy = "value";
+chart.fontSize = 10;
+
+var nodeTemplate = chart.nodes.template;
+nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+nodeTemplate.showSystemTooltip = true;
+nodeTemplate.propertyFields.fill = "color";
+nodeTemplate.tooltipText = "{name}'s kisses: {total}";
+
+// when rolled over the node, make all the links rolled-over
+nodeTemplate.events.on("over", function(event) {    
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {
+        if(dataItem.toNode){
+            dataItem.link.isHover = true;
+            dataItem.toNode.label.isHover = true;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = true;
+            dataItem.fromNode.label.isHover = true;
+        }
+    }) 
+
+    node.label.isHover = true;   
+})
+
+// when rolled out from the node, make all the links rolled-out
+nodeTemplate.events.on("out", function(event) {
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {        
+        if(dataItem.toNode){
+            dataItem.link.isHover = false;                
+            dataItem.toNode.label.isHover = false;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = false;
+           dataItem.fromNode.label.isHover = false;
+        }
+    })
+
+    node.label.isHover = false;
+})
+
+var label = nodeTemplate.label;
+label.relativeRotation = 90;
+
+label.fillOpacity = 0.4;
+let labelHS = label.states.create("hover");
+labelHS.properties.fillOpacity = 1;
+
+nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+// this adapter makes non-main character nodes to be filled with color of the main character which he/she kissed most
+nodeTemplate.adapter.add("fill", function(fill, target) {
+    let node = target;
+    let counters = {};
+    let mainChar = false;
+    node.incomingDataItems.each(function(dataItem) {
+        if(colors[dataItem.toName]){
+            mainChar = true;
+        }
+
+        if(isNaN(counters[dataItem.fromName])){
+            counters[dataItem.fromName] = dataItem.value;
+        }
+        else{
+            counters[dataItem.fromName] += dataItem.value;
+        }
+    })
+    if(mainChar){
+        return fill;
+    }
+
+    let count = 0;
+    let color;
+    let biggest = 0;
+    let biggestName;
+
+    for(var name in counters){
+        if(counters[name] > biggest){
+            biggestName = name;
+            biggest = counters[name]; 
+        }        
+    }
+    if(colors[biggestName]){
+        fill = colors[biggestName];
+    }
+  
+    return fill;
+})
+
+// link template
+var linkTemplate = chart.links.template;
+linkTemplate.strokeOpacity = 0;
+linkTemplate.fillOpacity = 0.15;
+linkTemplate.tooltipText = "{fromName} & {toName}:{value.value}";
+
+var hoverState = linkTemplate.states.create("hover");
+hoverState.properties.fillOpacity = 0.7;
+hoverState.properties.strokeOpacity = 0.7;
+
+// data credit label
+var creditLabel = chart.chartContainer.createChild(am4core.TextLink);
+creditLabel.text = "Data source: notrudedude";
+creditLabel.url = "https://www.reddit.com/user/notrudedude";
+creditLabel.y = am4core.percent(99);
+creditLabel.x = am4core.percent(99);
+creditLabel.horizontalCenter = "right";
+creditLabel.verticalCenter = "bottom";
+
+var titleImage = chart.chartContainer.createChild(am4core.Image);
+titleImage.href = "//www.amcharts.com/wp-content/uploads/2018/11/whokissed.png";
+titleImage.x = 30
+titleImage.y = 30;
+titleImage.width = 200;
+titleImage.height = 200;
 
 }); // end am4core.ready()
 </script>
