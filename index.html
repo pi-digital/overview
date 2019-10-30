@@ -72,7 +72,7 @@ var colors = {
 chart.data = [
 // node property fields take data from data items where they are first mentioned, that's 
 // why we add empty data items at the beginning and set colors here
-{"from":"#02: Integração ao Login Único (Acesso Br) da Plataforma de Cidadania Digital", "color":colors.Monica},
+{"from":"#02: Integração ao Login Único (Acesso Br) /nda Plataforma de Cidadania Digital", "color":colors.Monica},
 {"from":"#05: Aplicativo para Facilitação do Acesso a Informações e Comunicados Institucionais", "color":colors.Rachel},
 {"from":"#08: Simplificação do Acesso e Atendimento dos Serviços de Marcas e Patentes, e Facilitação da Consulta Processual (BuscaWeb)", "color":colors.Chandler},
 {"from":"#09: Redesenho do Portal do INPI", "color":colors.Ross},
@@ -164,7 +164,7 @@ var nodeTemplate = chart.nodes.template;
 nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
 nodeTemplate.showSystemTooltip = true;
 nodeTemplate.propertyFields.fill = "color";
-nodeTemplate.tooltipText = "Integrações da Entrega{name}: {total}";
+nodeTemplate.tooltipText = "Integrações da Entrega {name}: {total}";
 
 // when rolled over the node, make all the links rolled-over
 nodeTemplate.events.on("over", function(event) {    
