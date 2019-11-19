@@ -26,13 +26,6 @@
 				}
 			</style>
 		</noscript>
-	</head>
-	<body>
-		<header class="codrops-header">
-			<a href="https://pi-digital.github.io/apresentacao/"><h1>Plano PI Digital</h1></a>
-			<h2>Overview</h2>
-			<h5>ÚLTIMA ATUALIZAÇÃO<br>05/11/2019</h5>
-		</header>
 <!-- Styles -->
 <style>
 #chartdiv {
@@ -43,7 +36,23 @@
   font-family: "Roboto Condensed";
   display: table-row;
 }
-}
+		
+	    #playtwo {
+		font-family: 'Roboto Condensed';
+		display: block;
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 1em;
+		margin-top: 255px;
+		margin-left: 80px;
+		padding: 0px 50px 0px 10px;
+		position: absolute;
+		text-align: left;
+		color: rgb(51, 51, 51);
+		width: 525px;
+		line-height: 1.25em;
+	    }
+	
 </style>
 
 <!-- Resources -->
@@ -78,80 +87,79 @@ var colors = {
 chart.data = [
 // node property fields take data from data items where they are first mentioned, that's 
 // why we add empty data items at the beginning and set colors here
-{"from":"#02: Login Único \n (Acesso Br)", "color":colors.Monica},
-{"from":"#05: Aplicativo (App)", "color":colors.Rachel},
-{"from":"#08: Novo BuscaWeb", "color":colors.Chandler},
-{"from":"#09: Novo \n Portal do INPI", "color":colors.Ross},
-{"from":"#19: Monitoramento \n do PI Digital", "color":colors.Joey},
-{"from":"#21: Integração ao \n ConectaGov", "color":colors.Phoebe},
+{"from":"#02", "color":colors.Monica},
+{"from":"#05", "color":colors.Rachel},
+{"from":"#08", "color":colors.Chandler},
+{"from":"#09", "color":colors.Ross},
+{"from":"#19", "color":colors.Joey},
+{"from":"#21", "color":colors.Phoebe},
 
 // real data
-{"from":"#01: Nova Carta e Atualização \n do Portal de Serviços","to":"#03: Diagnóstico de \n Transformação Digital","value":50},
-{"from":"#01: Nova Carta e Atualização \n do Portal de Serviços","to":"#12: Guia de \n Atendimento do INPI","value":100},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#04: Implementação \n do GovPay","value":25},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#05: Aplicativo (App)","value":25},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#08: Novo BuscaWeb","value":100},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#10: Módulo de Avaliação \n Pós-Consumo","value":75},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#20: Análise de Viabilidade \n do ConectaGov","value":25},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#21: Integração ao \n ConectaGov","value":75},
-{"from":"#02: Login Único \n (Acesso Br)","to":"#24: Proteção de \n Dados Pessoais","value":75},
-{"from":"#03: Diagnóstico de \n Transformação Digital","to":"#04: Implementação \n do GovPay","value":50},
-{"from":"#03: Diagnóstico de \n Transformação Digital","to":"#06: Módulo E-Chip","value":50},
-{"from":"#03: Diagnóstico de \n Transformação Digital","to":"#07: Automação do Fluxo de \n Pedidos de Patentes","value":50},
-{"from":"#05: Aplicativo (App)","to":"#08: Novo BuscaWeb","value":75},
-{"from":"#08: Novo BuscaWeb","to":"#13: Notificação \n Automática por SMS","value":50},
-{"from":"#08: Novo BuscaWeb","to":"#14: Plano de Dados \n Abertos do INPI","value":25},
-{"from":"#08: Novo BuscaWeb","to":"#15: Nova Versão de \n Publicação da RPI","value":75},
-{"from":"#08: Novo BuscaWeb","to":"#20: Análise de Viabilidade \n do ConectaGov","value":25},
-{"from":"#08: Novo BuscaWeb","to":"#21: Integração ao \n ConectaGov","value":75},
-{"from":"#08: Novo BuscaWeb","to":"#22: Análise de Viabilidade da \n Expansão de Dados em Nuvem","value":25},
-{"from":"#08: Novo BuscaWeb","to":"#23: Expansão de \n Dados em Nuvem","value":75},
-{"from":"#08: Novo BuscaWeb","to":"#24: Proteção de \n Dados Pessoais","value":100},
-{"from":"#09: Novo \n Portal do INPI","to":"#02: Login Único \n (Acesso Br)","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#04: Implementação \n do GovPay","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#05: Aplicativo (App)","value":50},
-{"from":"#09: Novo \n Portal do INPI","to":"#10: Módulo de Avaliação \n Pós-Consumo","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#11: Agendamento de \n Atendimento Presencial","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#15: Nova Versão de \n Publicação da RPI","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#16: Nova Modelagem de \n Conteúdo Eletrônico","value":100},
-{"from":"#09: Novo \n Portal do INPI","to":"#17: Interação Eletrônica \n Informativa","value":100},
-{"from":"#09: Novo \n Portal do INPI","to":"#18: Assistência Virtual \n por Chatbot","value":100},
-{"from":"#09: Novo \n Portal do INPI","to":"#20: Análise de Viabilidade \n do ConectaGov","value":25},
-{"from":"#09: Novo \n Portal do INPI","to":"#21: Integração ao \n ConectaGov","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#22: Análise de Viabilidade da \n Expansão de Dados em Nuvem","value":25},
-{"from":"#09: Novo \n Portal do INPI","to":"#23: Expansão de \n Dados em Nuvem","value":75},
-{"from":"#09: Novo \n Portal do INPI","to":"#24: Proteção de \n Dados Pessoais","value":100},
-{"from":"#14: Plano de Dados \n Abertos do INPI","to":"#15: Nova Versão de \n Publicação da RPI","value":75},
-{"from":"#14: Plano de Dados \n Abertos do INPI","to":"#20: Análise de Viabilidade \n do ConectaGov","value":25},
-{"from":"#14: Plano de Dados \n Abertos do INPI","to":"#21: Integração ao \n ConectaGov","value":75},
-{"from":"#14: Plano de Dados \n Abertos do INPI","to":"#22: Análise de Viabilidade da \n Expansão de Dados em Nuvem","value":25},
-{"from":"#14: Plano de Dados \n Abertos do INPI","to":"#23: Expansão de \n Dados em Nuvem","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#01: Nova Carta e Atualização \n do Portal de Serviços","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#02: Login Único \n (Acesso Br)","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#03: Diagnóstico de \n Transformação Digital","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#04: Implementação \n do GovPay","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#05: Aplicativo (App)","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#06: Módulo E-Chip","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#07: Automação do Fluxo de \n Pedidos de Patentes","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#08: Novo BuscaWeb","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#09: Novo \n Portal do INPI","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#10: Módulo de Avaliação \n Pós-Consumo","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#11: Agendamento de \n Atendimento Presencial","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#12: Guia de \n Atendimento do INPI","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#13: Notificação \n Automática por SMS","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#14: Plano de Dados \n Abertos do INPI","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#15: Nova Versão de \n Publicação da RPI","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#16: Nova Modelagem de \n Conteúdo Eletrônico","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#17: Interação Eletrônica \n Informativa","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#18: Assistência Virtual \n por Chatbot","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#20: Análise de Viabilidade \n do ConectaGov","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#21: Integração ao \n ConectaGov","value":75},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#22: Análise de Viabilidade da \n Expansão de Dados em Nuvem","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#23: Expansão de \n Dados em Nuvem","value":25},
-{"from":"#19: Monitoramento \n do PI Digital","to":"#24: Proteção de \n Dados Pessoais","value":25},
-{"from":"#20: Análise de Viabilidade \n do ConectaGov","to":"#21: Integração ao \n ConectaGov","value":100},
-{"from":"#22: Análise de Viabilidade da \n Expansão de Dados em Nuvem","to":"#23: Expansão de \n Dados em Nuvem","value":100}]
-
+{"from":"#01","to":"#03","value":50},
+{"from":"#01","to":"#12","value":100},
+{"from":"#02","to":"#04","value":25},
+{"from":"#02","to":"#05","value":25},
+{"from":"#02","to":"#08","value":100},
+{"from":"#02","to":"#10","value":75},
+{"from":"#02","to":"#20","value":25},
+{"from":"#02","to":"#21","value":75},
+{"from":"#02","to":"#24","value":75},
+{"from":"#03","to":"#04","value":50},
+{"from":"#03","to":"#06","value":50},
+{"from":"#03","to":"#07","value":50},
+{"from":"#05","to":"#08","value":75},
+{"from":"#08","to":"#13","value":50},
+{"from":"#08","to":"#14","value":25},
+{"from":"#08","to":"#15","value":75},
+{"from":"#08","to":"#20","value":25},
+{"from":"#08","to":"#21","value":75},
+{"from":"#08","to":"#22","value":25},
+{"from":"#08","to":"#23","value":75},
+{"from":"#08","to":"#24","value":100},
+{"from":"#09","to":"#02","value":75},
+{"from":"#09","to":"#04","value":75},
+{"from":"#09","to":"#05","value":50},
+{"from":"#09","to":"#10","value":75},
+{"from":"#09","to":"#11","value":75},
+{"from":"#09","to":"#15","value":75},
+{"from":"#09","to":"#16","value":100},
+{"from":"#09","to":"#17","value":100},
+{"from":"#09","to":"#18","value":100},
+{"from":"#09","to":"#20","value":25},
+{"from":"#09","to":"#21","value":75},
+{"from":"#09","to":"#22","value":25},
+{"from":"#09","to":"#23","value":75},
+{"from":"#09","to":"#24","value":100},
+{"from":"#14","to":"#15","value":75},
+{"from":"#14","to":"#20","value":25},
+{"from":"#14","to":"#21","value":75},
+{"from":"#14","to":"#22","value":25},
+{"from":"#14","to":"#23","value":75},
+{"from":"#19","to":"#01","value":25},
+{"from":"#19","to":"#02","value":75},
+{"from":"#19","to":"#03","value":25},
+{"from":"#19","to":"#04","value":25},
+{"from":"#19","to":"#05","value":75},
+{"from":"#19","to":"#06","value":25},
+{"from":"#19","to":"#07","value":25},
+{"from":"#19","to":"#08":75},
+{"from":"#19","to":"#09","value":75},
+{"from":"#19","to":"#10","value":25},
+{"from":"#19","to":"#11","value":25},
+{"from":"#19","to":"#12","value":25},
+{"from":"#19","to":"#13","value":25},
+{"from":"#19","to":"#14","value":25},
+{"from":"#19","to":"#15","value":25},
+{"from":"#19","to":"#16","value":25},
+{"from":"#19","to":"#17","value":25},
+{"from":"#19","to":"#18","value":25},
+{"from":"#19","to":"#20","value":25},
+{"from":"#19","to":"#21","value":75},
+{"from":"#19","to":"#22","value":25},
+{"from":"#19","to":"#23","value":25},
+{"from":"#19","to":"#24","value":25},
+{"from":"#20","to":"#21","value":100},
+{"from":"#22","to":"#23","value":100}]
 
 chart.dataFields.fromName = "from";
 chart.dataFields.toName = "to";
@@ -162,7 +170,7 @@ chart.minNodeSize = 0.01;
 chart.startAngle = 150;
 chart.endAngle = chart.startAngle + 360;
 chart.sortBy = "name";
-chart.fontSize = 12.5;
+chart.fontSize = 18;
 
 var nodeTemplate = chart.nodes.template;
 nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
@@ -269,8 +277,39 @@ hoverState.properties.strokeOpacity = 0.7;
 	
 // end am4core.ready()
 </script>
-
-<!-- HTML -->
+		
+	</head>
+	<body>
+		<header class="codrops-header">
+			<a href="https://pi-digital.github.io/apresentacao/"><h1>Plano PI Digital</h1></a>
+			<h2>Overview</h2>
+			<h5>ÚLTIMA ATUALIZAÇÃO<br>05/11/2019</h5>
+		</header>
+			<div id="playtwo">#01: Nova Carta e Atualização do Portal de Serviços<br>
+				#02: Login Único (Acesso Br)<br>
+				#03: Diagnóstico de Transformação Digital<br>
+				#04: Implementação do GovPay<br>
+				#05: Aplicativo (App)<br>
+				#06: Módulo E-Chip<br>
+				#07: Automação do Fluxo de Pedidos de Patentes<br>
+				#08: Novo BuscaWeb<br>
+				#09: Novo Portal do INPI<br>
+				#10: Módulo de Avaliação Pós-Consumo<br>
+				#11: Agendamento de Atendimento Presencial<br>
+				#12: Guia de Atendimento do INPI<br>
+				#13: Notificação Automática por SMS<br>
+				#14: Plano de Dados Abertos do INPI<br>
+				#15: Nova Versão de Publicação da RPI<br>
+				#16: Nova Modelagem de Conteúdo Eletrônico<br>
+				#17: Interação Eletrônica Informativa<br>
+				#18: Assistência Virtual por Chatbot<br>
+				#19: Monitoramento do PI Digital<br>
+				#20: Análise de Viabilidade do ConectaGov<br>
+				#21: Integração ao ConectaGov<br>
+				#22: Análise de Viabilidade da Expansão de Dados em Nuvem<br>
+				#23: Expansão de Dados em Nuvem<br>
+				#24: Proteção de Dados Pessoais
+			</div>
 		<div id="chartdiv"></div>
 		<div class="wrapper">
                 <div id="st-accordion" class="st-accordion">
