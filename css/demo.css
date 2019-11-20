@@ -62,6 +62,7 @@ h1 span{
 .codrops-header {
 	padding: 3em 3em 0 3em;
 	letter-spacing: -1px;
+	width: 100%;
 }
 
 .codrops-header h1 {
