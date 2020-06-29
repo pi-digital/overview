@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Overview | PI Digital</title>
+		<meta name="description" content="Overview do Projeto de Transformação Digital dos Serviços Prestados pelo INPI" />
+		<meta name="keywords" content="transformação digital, serviços, atendimento, comunicação, interoperabilidade, dados abertos, segurança da informação" />
+		<meta name="author" content="Ouvidoria do INPI" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+	        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+       		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+		<noscript>
+			<style>
+				.st-accordion ul li{
+					height:auto;
+				}
+				.st-accordion ul li > a span{
+					visibility:hidden;
+				}
+			</style>
+		</noscript>
+	</head>
+	<body>
+		<header class="codrops-header">
+			<a href="https://pi-digital.github.io/apresentacao/"><h1>Plano PI Digital</h1></a>
+			<h2>Overview</h2>
+			<h5>ÚLTIMA ATUALIZAÇÃO<br>05/05/2020</h5>
+		</header>
+<!-- Styles -->
+<style>
+#chartdiv {
+  width:100%;
+  height: 750px;
+  overflow: visible;
+  padding-top: 10px;
+  font-family: "Roboto Condensed";
+}
+		
+	    #playtwo {
+		font-family: 'Roboto Condensed';
+		display: block;
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 0.85em;
+		margin-top: 150px;
+		margin-left: 3em;
+		padding: 0px 50px 0px 10px;
+		position: absolute;
+		text-align: left;
+		color: rgb(51, 51, 51);
+		width: 100%;
+		line-height: 1.25em;
+	    }
+	
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+
+// colors of main characters
+chart.colors.saturation = 1;
+chart.colors.step = 1;
+var colors = {
+    301:chart.colors.next(),
+    Monica:chart.colors.next(),
+    Phoebe:chart.colors.next(),
+    Ross:chart.colors.next(),
+    Joey:chart.colors.next(),
+    Chandler:chart.colors.next()
+}
+
+// data was provided by: https://www.reddit.com/user/notrudedude
+
+chart.data = [
+// node property fields take data from data items where they are first mentioned, that's 
+// why we add empty data items at the beginning and set colors here
+{"from":"#02", "color":colors.Monica},
+{"from":"#05", "color":colors.Rachel},
+{"from":"#08", "color":colors.Chandler},
+{"from":"#09", "color":colors.Ross},
+{"from":"#19", "color":colors.Joey},
+{"from":"#21", "color":colors.Phoebe},
+
+// real data
+{"from":"#01","to":"#03","value":50},
+{"from":"#01","to":"#12","value":100},
+{"from":"#02","to":"#04","value":25},
+{"from":"#02","to":"#05","value":25},
+{"from":"#02","to":"#08","value":100},
+{"from":"#02","to":"#10","value":75},
+{"from":"#02","to":"#20","value":25},
+{"from":"#02","to":"#21","value":75},
+{"from":"#02","to":"#24","value":75},
+{"from":"#03","to":"#04","value":50},
+{"from":"#03","to":"#06","value":50},
+{"from":"#03","to":"#07","value":50},
+{"from":"#05","to":"#08","value":75},
+{"from":"#08","to":"#13","value":50},
+{"from":"#08","to":"#14","value":25},
+{"from":"#08","to":"#15","value":75},
+{"from":"#08","to":"#20","value":25},
+{"from":"#08","to":"#21","value":75},
+{"from":"#08","to":"#22","value":25},
+{"from":"#08","to":"#23","value":75},
+{"from":"#08","to":"#24","value":100},
+{"from":"#09","to":"#02","value":75},
+{"from":"#09","to":"#04","value":75},
+{"from":"#09","to":"#05","value":50},
+{"from":"#09","to":"#10","value":75},
+{"from":"#09","to":"#11","value":75},
+{"from":"#09","to":"#15","value":75},
+{"from":"#09","to":"#16","value":100},
+{"from":"#09","to":"#17","value":100},
+{"from":"#09","to":"#18","value":100},
+{"from":"#09","to":"#20","value":25},
+{"from":"#09","to":"#21","value":75},
+{"from":"#09","to":"#22","value":25},
+{"from":"#09","to":"#23","value":75},
+{"from":"#09","to":"#24","value":100},
+{"from":"#14","to":"#15","value":75},
+{"from":"#14","to":"#20","value":25},
+{"from":"#14","to":"#21","value":75},
+{"from":"#14","to":"#22","value":25},
+{"from":"#14","to":"#23","value":75},
+{"from":"#19","to":"#01","value":25},
+{"from":"#19","to":"#02","value":75},
+{"from":"#19","to":"#03","value":25},
+{"from":"#19","to":"#04","value":25},
+{"from":"#19","to":"#05","value":75},
+{"from":"#19","to":"#06","value":25},
+{"from":"#19","to":"#07","value":25},
+{"from":"#19","to":"#08","value":75},
+{"from":"#19","to":"#09","value":75},
+{"from":"#19","to":"#10","value":25},
+{"from":"#19","to":"#11","value":25},
+{"from":"#19","to":"#12","value":25},
+{"from":"#19","to":"#13","value":25},
+{"from":"#19","to":"#14","value":25},
+{"from":"#19","to":"#15","value":25},
+{"from":"#19","to":"#16","value":25},
+{"from":"#19","to":"#17","value":25},
+{"from":"#19","to":"#18","value":25},
+{"from":"#19","to":"#20","value":25},
+{"from":"#19","to":"#21","value":75},
+{"from":"#19","to":"#22","value":25},
+{"from":"#19","to":"#23","value":25},
+{"from":"#19","to":"#24","value":25},
+{"from":"#20","to":"#21","value":100},
+{"from":"#22","to":"#23","value":100}]
+
+chart.dataFields.fromName = "from";
+chart.dataFields.toName = "to";
+chart.dataFields.value = "value";
+
+chart.nodePadding = 2;
+chart.minNodeSize = 0.01;
+chart.startAngle = 150;
+chart.endAngle = chart.startAngle + 360;
+chart.sortBy = "name";
+chart.fontSize = 18;
+
+var nodeTemplate = chart.nodes.template;
+nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+nodeTemplate.showSystemTooltip = true;
+nodeTemplate.propertyFields.fill = "color";
+nodeTemplate.tooltipText = "Entrega {name}: {total}";
+
+// when rolled over the node, make all the links rolled-over
+nodeTemplate.events.on("over", function(event) {    
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {
+        if(dataItem.toNode){
+            dataItem.link.isHover = true;
+            dataItem.toNode.label.isHover = true;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = true;
+            dataItem.fromNode.label.isHover = true;
+        }
+    }) 
+
+    node.label.isHover = true;   
+})
+
+// when rolled out from the node, make all the links rolled-out
+nodeTemplate.events.on("out", function(event) {
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {        
+        if(dataItem.toNode){
+            dataItem.link.isHover = false;                
+            dataItem.toNode.label.isHover = false;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = false;
+           dataItem.fromNode.label.isHover = false;
+        }
+    })
+
+    node.label.isHover = false;
+})
+
+var label = nodeTemplate.label;
+label.relativeRotation = 90;
+
+label.fillOpacity = 0.4;
+let labelHS = label.states.create("hover");
+labelHS.properties.fillOpacity = 1;
+
+nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+// this adapter makes non-main character nodes to be filled with color of the main character which he/she kissed most
+nodeTemplate.adapter.add("fill", function(fill, target) {
+    let node = target;
+    let counters = {};
+    let mainChar = false;
+    node.incomingDataItems.each(function(dataItem) {
+        if(colors[dataItem.toName]){
+            mainChar = true;
+        }
+
+        if(isNaN(counters[dataItem.fromName])){
+            counters[dataItem.fromName] = dataItem.value;
+        }
+        else{
+            counters[dataItem.fromName] += dataItem.value;
+        }
+    })
+    if(mainChar){
+        return fill;
+    }
+
+    let count = 0;
+    let color;
+    let biggest = 0;
+    let biggestName;
+
+    for(var name in counters){
+        if(counters[name] > biggest){
+            biggestName = name;
+            biggest = counters[name]; 
+        }        
+    }
+    if(colors[biggestName]){
+        fill = colors[biggestName];
+    }
+  
+    return fill;
+})
+
+// link template
+var linkTemplate = chart.links.template;
+linkTemplate.strokeOpacity = 0;
+linkTemplate.fillOpacity = 0.15;
+linkTemplate.tooltipText = "{fromName} & {toName}:{value.value}";
+
+var hoverState = linkTemplate.states.create("hover");
+hoverState.properties.fillOpacity = 0.7;
+hoverState.properties.strokeOpacity = 0.7;
+	
+});
+	
+// end am4core.ready()
+</script>
+
+			<div id="playtwo">#01: Nova Carta e Atualização do Portal de Serviços<br>
+				#02: Login Único (Acesso Br)<br>
+				#03: Diagnóstico de Transformação Digital<br>
+				#04: Implementação do GovPay<br>
+				#05: Aplicativo (App)<br>
+				#06: Módulo E-Chip<br>
+				#07: Automação do Fluxo de Pedidos de Patentes<br>
+				#08: Novo BuscaWeb<br>
+				#09: Novo Portal do INPI<br>
+				#10: Módulo de Avaliação Pós-Consumo<br>
+				#11: Agendamento de Atendimento Presencial<br>
+				#12: Guia de Atendimento do INPI<br>
+				#13: Notificação Automática por SMS<br>
+				#14: Plano de Dados Abertos do INPI<br>
+				#15: Nova Versão de Publicação da RPI<br>
+				#16: Nova Modelagem de Conteúdo Eletrônico<br>
+				#17: Interação Eletrônica Informativa<br>
+				#18: Assistência Virtual por Chatbot<br>
+				#19: Monitoramento do PI Digital<br>
+				#20: Análise de Viabilidade do ConectaGov<br>
+				#21: Integração ao ConectaGov<br>
+				#22: Análise de Viabilidade da Expansão de Dados em Nuvem<br>
+				#23: Expansão de Dados em Nuvem<br>
+				#24: Proteção de Dados Pessoais
+			</div>
+		<div id="chartdiv"></div>
+		<div class="wrapper">
+                <div id="st-accordion" class="st-accordion">
+                    <ul>
+                        <li>
+                            <a href="#">Linhas Gerais<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <p>Por ocasião do lançamento do Plano PI Digital (31/07/2019), mais de 93% dos serviços públicos prestados pelo INPI são disponibilizados digitalmente, do acesso aos sistemas eletrônicos de emissão da Guia de Recolhimento da União, pagamento das retribuições, peticionamento eletrônico e acompanhamento processual, até a entrega do serviço solicitado pelas publicações da Revista da Propriedade Industrial ou outra ferramenta tecnológica.</p>
+				<p>Em junho de 2018, no âmbito dos projetos de e-Government, o INPI formalizou o Plano de Integração ao Login Único (Brasil Cidadão) da Plataforma de Cidadania Digital, que constitui um mecanismo de acesso digital único do usuário aos serviços públicos, com nível de segurança compatível com o grau de exigência, natureza e criticidade dos dados e das informações pertinentes ao serviço solicitado.</p>
+				<p>Portanto, com o Plano PI Digital, o INPI avança no seu alinhamento aos compromissos do Governo Federal perante a sociedade brasileira e a comunidade internacional para a redução dos custos de comunicação e informação, o aumento da eficiência e efetividade do Instituto, a ampliação do alcance dos serviços oferecidos, o aprimoramento da qualidade dos serviços e dados produzidos e conservados, a maximização da velocidade da prestação dos serviços, a ampliação da transparência, a relativização da distância e o aperfeiçoamento da gestão pública.</p>
+				<p>O Plano PI Digital guarda significativo alinhamento com os objetivos estratégicos estabelecidos para o INPI até 2021 e, a partir do modelo conceitual adotado pela Estratégia Brasileira de Transformação Digital, com a sua estruturação em dois grupos de eixos temáticos (eixos habilitadores e eixos de transformação digital), infere-se sua estreita conformidade com os seguintes pilares:</p>
+				<p><strong>Pesquisa, Desenvolvimento e Inovação</strong>: “estimular o desenvolvimento de novas tecnologias com a ampliação da produção científica e tecnológica, buscando a solução de grandes desafios nacionais.”<br>
+				<strong>Confiança no Ambiente Digital</strong>: “transformar a Internet em um ambiente seguro, confiável, propício aos serviços e ao consumo, com respeito aos direitos dos cidadãos.”<br>
+				<strong>Dimensão Internacional</strong>: “fortalecer a liderança brasileira nos fóruns globais relacionados aos temas digitais, estimular a competitividade e a presença das empresas brasileiras no exterior, e promover a integração regional em economia digital.”<br>
+     				<strong>Transformação Digital da Economia</strong>: “estimular uma economia brasileira crescentemente digitalizada, dinâmica, produtiva e competitiva, acompanhando a fronteira econômica mundial.”<br>
+     				<strong>Transformação Digital - Cidadania e Governo</strong>: “tornar o governo mais dinâmico, mais próximo da população e mais eficiente para resolver problemas e facilitar a vida do cidadão.”</p>
+				<p>Para a convergência de esforços e clara definição dos propósitos de condução das atividades ora planejadas, o Plano PI Digital é orientado à consecução de quatro eixos, assim descritos:</p>
+				<p><strong>Atendimento</strong>: ampliar e informatizar o atendimento aos usuários do INPI, e melhorar o acesso aos serviços e informações no âmbito de atuação do INPI;<br>
+				<strong>Comunicação</strong>: diagnosticar e comunicar amplamente a experiência do usuário com o INPI, e mitigar a assimetria da informação acerca da propriedade industrial;<br>
+				<strong>Dados Abertos e Interoperabilidade</strong>: expandir a abertura de dados do INPI para geração de valor à cadeia produtiva nacional e promover a interoperabilidade com as ferramentas da Plataforma de Cidadania Digital;<br>
+				<strong>Infraestrutura e Segurança da Informação</strong>: assegurar ambiente virtual robusto e seguro à prestação dos serviços.</p>
+                            </div>
+                        </li>
+			<li>
+                            <a href="#">Governança<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+                                <h4>Pontos Focais das Instâncias Parceiras</h4>
+				<p><strong>Renata Lyra Revoredo de Oliveira</strong> - Secretaria de Governo Digital<br>
+				<strong>Marcos Ricardo dos Santos</strong> - Secretaria de Governo Digital<br>
+				<strong>Heloina Sucena Fonseca</strong> - Secretaria Especial de Modernização de Estado<br>
+				<strong>Sylvio Cezar Koury Musolino Filho</strong> - Secretaria Especial de Modernização de Estado<br>
+				<strong>Graziele Cristina Silveira Zerbini Costal</strong> - Secretaria Especial de Produtividade, Emprego e Competitividade<br>
+				<strong>Felipe Caixeta Carvalho</strong> - Secretaria Especial de Produtividade, Emprego e Competitividade</p>
+				<h4>Comitê Estratégico do Plano PI Digital</h4>
+				<p><strong>Igor Calvet</strong> - Secretário-Adjunto de Produtividade, Emprego e Competitividade<br>
+				<strong>Luiza Deusdará</strong> - Subsecretária de Supervisão Estratégica<br>
+				<strong>Luis Felipe Monteiro</strong> - Secretário de Governo Digital<br>
+				<strong>Márcia Luiza de Amorim</strong> - Secretária Especial de Modernização de Estado<br>
+				<strong>Cláudio Vilar Furtado</strong> - Presidente do Instituto Nacional da Propriedade Industrial</p>
+				<h4>Supervisão do Plano PI Digital no Âmbito do INPI</h4>
+				<p><strong>Pedro Areas Burlandy</strong></p>
+				<h4>Gerência Executiva do Plano PI Digital no Âmbito do INPI</h4>
+				<p><strong>Davison Rego Menezes</strong></p>
+				<h4>Força-Tarefa de Transformação Digital no Âmbito do INPI</h4>
+				<p><strong>Alessandro Bunn Bergamaschi</strong><br>
+				<strong>Davison Rego Menezes</strong><br>
+				<strong>Gabriel de Almeida Fontes Moreno</strong><br>
+				<strong>Gislaine Zulli</strong><br>
+				<strong>Marcelo Rutowitsch Chimento</strong><br>
+				<strong>Marcus Vinicius da Motta Vieira</strong><br>
+				<strong>Pedro Henrique Alvisi</strong><br>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #01<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+<h1>Nova Carta de Serviços ao Usuário e Atualização do Portal de Serviços do Governo Federal</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #1 do Plano PI Digital (melhorar o acesso aos serviços e informações no âmbito de atuação do INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017, no Decreto nº 9.094, de 17 de julho de 2017, e no Decreto nº 8.936, de 19 de dezembro de 2016.<br>
+Tramitação no Serviço Eletrônico de Informações (SEI) da minuta da nova Carta de Serviços ao Usuário por meio do processo nº 52402.009883/2018-21.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Disponibilização do acesso de editores ao Portal de Serviços do Governo Federal.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #02<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Integração ao Login Único (Acesso Br) da Plataforma de Cidadania Digital</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #1 do Plano PI Digital (melhorar o acesso aos serviços e informações no âmbito de atuação do INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.936, de 19 de dezembro de 2016.<br>
+Repactuação do Plano de Integração à Plataforma de Cidadania Digital (Login Único) firmado pelo INPI em 14 de junho de 2018.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma do Login Único.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #03<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Diagnóstico de Transformação Digital dos Serviços Prestados pelo INPI</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #1 do Plano PI Digital (melhorar o acesso aos serviços e informações no âmbito de atuação do INPI).<br>
+Fluxo de pagamento de retribuições representado graficamente pelo Serviço de Arrecadação do INPI por meio da ferramenta Bizagi.<br>
+Fluxo de patentes representado graficamente pela Diretoria de Patentes, Programas de Computador e Topografias de Circuitos Integrados por meio de slides PowerPoint.<br>
+Fluxo de pagamento de retribuições dos serviços prestados pelo INPI disciplinado pela Lei nº 9.279, de 14 de maio de 1996 (Lei da Propriedade Industrial).</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Atualização do Portal de Serviços do Governo Federal (Entrega #01).<br>
+Disponibilização do formulário eletrônico de diagnóstico e impacto da transformação digital.<br>
+Revisão da Resolução INPI/PR nº 204/17, que estabelece conceitos, diretrizes e procedimentos relativos à restituição de retribuições.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #04<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Implementação de Meios Digitais de Pagamento de Retribuições (GovPay)</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa de aderência qualificada ao disposto no Decreto nº 9.094, de 17 de julho de 2017.<br>
+Fluxo de pagamento de retribuições representado graficamente pelo Serviço de Arrecadação do INPI por meio da ferramenta Bizagi.<br>
+Fluxo de pagamento de retribuições dos serviços prestados pelo INPI disciplinado pela Lei nº 9.279, de 14 de maio de 1996 (Lei da Propriedade Industrial).</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de pagamento por meios digitais.</p>
+				</div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #05<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Aplicativo para Facilitação do Acesso a Informações e Comunicados Institucionais</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #1 do Plano PI Digital (melhorar o acesso aos serviços e informações no âmbito de atuação do INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 9.094, de 17 de julho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Realização de concurso de startups ou de hackathon para o desenvolvimento do aplicativo.<br>
+Estreitamento das relações institucionais entre o INPI, o SERPRO, a ANVISA, a FIESP e outros órgãos com experiência na realização de hackathon. Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma do aplicativo.</p>
+				</div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #06<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Módulo E-Chip para Peticionamento Eletrônico nos Serviços de Topografias de Circuitos Integrados</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #2 do Plano PI Digital (transformar todos os serviços analógicos prestados pelo INPI em digitais).<br>
+Iniciativa necessária à implementação da modalidade digital a 100% dos serviços prestados pelo INPI.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Aprovação da tabela de retribuições dos serviços do INPI pelo Ministério da Economia.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #07<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Soluções Tecnológicas de Automação do Fluxo de Processos de Patentes</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #3 do Plano PI Digital (revisar, simplificar e automatizar os processos de exame de marcas e patentes).<br>
+Aquisição ou desenvolvimento dos sistemas de tecnologia da informação previsto no Acordo de Cooperação Técnica nº 6/2018-SEI entre a União, por intermédio do Ministério da Indústria, Comércio Exterior e Serviços, a Agência Brasileira de Desenvolvimento Industrial (ABDI) e o INPI. </p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Recomendações de consultoria e de especificação técnica dos requisitos de tecnologia da informação resultantes do Projeto Transitório – Fase 2 do Prosperity Fund.<br>
+Elaboração dos Estudos Técnicos Preliminares - ETP.<br>
+Recursos financeiros extraordinários para aquisição ou desenvolvimento dos sistemas de tecnologia da informação.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #08<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Simplificação do Acesso e Atendimento dos Serviços de Marcas e Patentes, e Facilitação da Consulta Processual (BuscaWeb)</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #3 do Plano PI Digital (revisar, simplificar e automatizar os processos de exame de marcas e patentes).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 9.094, de 17 de julho de 2017.<br>
+Pesquisa de Usabilidade do Portal do INPI realizada pela Ouvidoria do INPI nos períodos de 14 a 18 de janeiro e de 11 a 15 de fevereiro de 2019. </p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Desenvolvimento de nova versão da base BuscaWeb em programação leve e ágil.<br>
+Concepção de modelos de páginas e conteúdos eletrônicos representativos da identidade digital do INPI.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #09<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Redesenho do Portal do INPI</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #3 do Plano PI Digital (revisar, simplificar e automatizar os processos de exame de marcas e patentes).<br>
+Iniciativa de aderência qualificada à nova identidade digital do Governo Federal.<br>
+Protótipos de ferramentas e funcionalidades aplicados ao novo Portal desenvolvidos pela Ouvidoria do INPI.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Concepção de modelos de páginas e conteúdos eletrônicos representativos da identidade digital do INPI.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #10<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Módulo de Avaliação Pós-Consumo do Serviço (WEB, SMS e Outros Canais)</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de avaliação pós-consumo.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #11<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Solução de Agendamento Eletrônico de Atendimento Presencial</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.936, de 19 de dezembro de 2016.<br>
+Tramitação no Serviço Eletrônico de Informações (SEI) da minuta da Política de Relacionamento e Transparência do INPI por meio do processo nº 52400.110283/2016-63, com a disciplina do Serviço de Atendimento Presencial. </p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Definição institucional dos pressupostos mínimos para o Serviço de Atendimento Presencial.<br>
+Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de solicitação de agendamento eletrônico.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #12<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Guia de Atendimento do INPI</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017.<br>
+Tramitação no Serviço Eletrônico de Informações (SEI) da proposta de instituição da Rede de Agentes Institucional de Relacionamento no âmbito do INPI por meio do processo nº 52402.007846/2019-60. </p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Instituição da Rede de Agentes Institucional de Relacionamento no âmbito do INPI.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #13<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Notificação Automática da Movimentação Processual por SMS</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.936, de 19 de dezembro de 2016.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de notificação automática.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #14<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Plano de Dados Abertos do INPI para o Biênio 2019-2020 Publicado e Abertura de Novos Conjuntos de Dados Institucionais</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.777, de 11 de maio de 2016.<br>
+Tramitação no Serviço Eletrônico de Informações (SEI) da minuta do Plano de Dados Abertos do INPI para o biênio 2019-2020 por meio do processo nº 52402.009854/2018-60. </p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Definição institucional das bases de dados passíveis de abertura.</p>
+		                        <li>
+                            <a href="#">Entrega #15<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Nova Versão de Publicação da Revista da Propriedade Industrial</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 9.094, de 17 de julho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Estreitamento das relações institucionais entre o INPI e a Imprensa Nacional para conhecimento da plataforma de publicação do Diário Oficial.</p>
+		                           <li>
+                            <a href="#">Entrega #16<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Modelagem de Conteúdo Eletrônico Específico para Instituições de Inovação e Campos Mercadológicos Emergentes</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017 e no Decreto nº 9.094, de 17 de julho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Estreitamento das relações institucionais entre o INPI e Instituições Científicas, Tecnológicas e de Inovação.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #17<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Interação Eletrônica Informativa entre os Serviços Digitais do INPI e Serviços Públicos Externos Afins</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017, e no Decreto nº 9.094, de 17 de julho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Estreitamento das relações institucionais entre o INPI e órgãos prestadores de serviços públicos afins.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #18<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Ferramenta de Assistência Virtual por Chatbot para Comunicação Interativa dos Serviços</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #4 do Plano PI Digital (modernizar a publicação dos resultados, o acesso aos processos e a avaliação dos serviços prestados pelo INPI).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.460, de 26 de junho de 2017, e no Decreto nº 9.094, de 17 de julho de 2017.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de assistência virtual por chatbot.</p>
+                            </div>
+                        </li>
+                     <li>
+                            <a href="#">Entrega #19<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Plano de Monitoramento e Campanha de Divulgação do Projeto de Transformação Digital</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Protótipo de monitoramento via web desenvolvido pela Força-Tarefa de Transformação Digital do INPI.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Aprovação do modelo de monitoramento pelo Comitê Estratégico do Plano PI Digital.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #20<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Análise de Viabilidade da Integração dos Sistemas do INPI às Bases de Dados da Administração Pública Federal por meio da Plataforma ConectaGov</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.936, de 19 de dezembro de 2016.<br>
+Iniciativa promovida sem êxito em ocasiões transatas.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Estreitamento das relações institucionais entre o INPI, a Receita Federal e o Banco Central do Brasil.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #21<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Integração dos Sistemas do INPI às Bases de Dados da Administração Pública Federal por meio da Plataforma ConectaGov</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Iniciativa de aderência qualificada ao disposto no Decreto nº 8.936, de 19 de dezembro de 2016.<br>
+Iniciativa promovida sem êxito em ocasiões transatas.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Análise de viabilidade da integração dos Sistemas do INPI às bases de dados da Administração Pública Federal por meio da plataforma ConectaGov (Entrega #13).<br>
+Alocação no INPI de Analistas de Tecnologia da Informação da SGD.<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma ConectaGov.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #22<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Análise de Viabilidade da Expansão dos Recursos de Armazenamento de Dados em Nuvem</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Iniciativa vislumbrada em ocasiões transatas sem avanços significativos.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Mapeamento da capacidade de armazenamento na hospedagem disponibilizada e a necessidade, associada à finalidade proposta pelo INPI, dos recursos de estoque em nuvem.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #23<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Expansão dos Recursos de Armazenamento de Dados em Nuvem</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Iniciativa vislumbrada em ocasiões transatas sem avanços significativos.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Análise de viabilidade da expansão dos recursos de armazenamento de dados em nuvem (Entrega #14).<br>
+Planejamento da transferência de conhecimento, garantia e suporte para sustentabilidade da operacionalização integrada entre os sistemas do INPI e a plataforma de armazenamento dos dados em nuvem.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Entrega #24<span class="st-arrow">Open or Close</span></a>
+                            <div class="st-content">
+							<h1>Proteção do Acesso a Dados Pessoais da Base BuscaWeb</h1>
+<h4><strong>Informações Gerais</strong></h4>
+<p>Iniciativa vinculada ao Objetivo #5 do Plano PI Digital (ações estruturantes).<br>
+Iniciativa de aderência qualificada ao disposto na Lei nº 13.709, de 14 de agosto de 2018.<br>
+Pesquisa de Usabilidade do Portal do INPI realizada pela Ouvidoria do INPI nos períodos de 14 a 18 de janeiro e de 11 a 15 de fevereiro de 2019.</p>
+<h4><strong>Condicionantes</strong></h4>
+<p>Desenvolvimento de nova versão da base BuscaWeb em programação leve e ágil.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.accordion.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+			
+				$('#st-accordion').accordion({
+					oneOpenedItem	: true
+				});
+				
+            });
+        </script>
+	</body></html>
